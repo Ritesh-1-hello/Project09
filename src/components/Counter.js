@@ -15,7 +15,8 @@ class Counter extends React.Component {
   }
 
   handleIncrement = async () => {
-    console.log(JSON.stringify(this.state.history), "History");
+    console.log("increment function");
+    console.log("Git changes");
     await this.setState((prevState) => ({
       counter: prevState.counter + this.state.customInput,
       customInput: 1,
