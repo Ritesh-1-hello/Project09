@@ -8,16 +8,14 @@ class Counter extends React.Component {
     super(props);
 
     this.state = {
-      counter: 0,
-      customInput: 1,
+      counter: 100,
+      customInput: 101,
       history: [],
     };
   }
 
   handleIncrement = async () => {
-    console.log("increment function");
-
-    console.log(JSON.stringify(this.state.history));
+    console.log(JSON.stringify(this.state.history), "History");
     await this.setState((prevState) => ({
       counter: prevState.counter + this.state.customInput,
       customInput: 1,
